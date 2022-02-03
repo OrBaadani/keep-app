@@ -1,0 +1,114 @@
+// SETUP
+@import 'setup/typography';
+@import 'setup/variables';
+@import 'setup/mixins';
+// @import 'setup/functions';
+// // BASICS
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+// //CMPS
+
+@import 'cmps/about';
+@import 'cmps/app-footer';
+@import 'cmps/app-header';
+@import 'cmps/keep-app';
+@import 'cmps/note-add';
+@import 'cmps/note-details';
+@import 'cmps/note-edit-tools';
+@import 'cmps/note-filter';
+@import 'cmps/note-list';
+@import 'cmps/note-preview';
+@import 'cmps/note-todos';
+@import 'cmps/user-msg';
+
+/* media query */
+
+@media (max-width: 1050px) {
+    .note-list-ul {
+        padding-top: 20px;
+        column-count: 3;
+        column-gap: 15px;
+        /* column-width: 300px; */
+        break-inside: avoid;
+        overflow: hidden;
+    }
+    .note-list-ul > li {
+        width: 300px;
+    }
+}
+
+@media (max-width: 950px) {
+    .note-list-ul {
+        padding-top: 20px;
+        column-count: 2;
+    }
+    .note-list-ul > li {
+        width: 350px;
+    }
+}
+
+@media (max-width: 740px) {
+    .note-list-ul {
+        padding-top: 20px;
+        column-count: 2;
+        column-gap: 15px;
+        /* column-width: 300px; */
+        break-inside: avoid;
+        overflow: hidden;
+    }
+    .note-list-ul > li {
+        width: 270px;
+    }
+    .note-filter {
+        position: static;
+        z-index: 7;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 10px;
+        display: block;
+    }
+    .note-filter div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 550px) {
+    .note-list-ul {
+        padding-top: 20px;
+        column-gap: 15px;
+        column-count: 1;
+        /* column-width: 300px; */
+        break-inside: avoid;
+        overflow: hidden;
+    }
+    .note-list-ul > li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .note-add div {
+        flex-direction: column;
+        position: fixed;
+        z-index: 5;
+        width: 100%;
+        bottom: 0;
+        background-color: whitesmoke;
+    }
+    .note-add input {
+        width: 250px;
+    }
+    .btn-add-todo {
+        display: block;
+    }
+    .keep-app {
+        // margin-bottom: 80px;
+    }
+    .app-footer {
+        margin-top: 80px;
+    }
+}

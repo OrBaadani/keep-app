@@ -1,0 +1,27 @@
+.note-filter {
+    box-shadow: 0px 0px 7px 0.5px rgba(82, 82, 82, 0.66);
+    padding: 6px;
+    background-color: white;
+    z-index: 2;
+    display: inline-block;
+    position: fixed;
+    top: 4vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    input,
+    select {
+        font-family: lato;
+        border: none;
+        font-size: 16px;
+    }
+    select {
+        /* width: 70px; */
+        border-left: 1px solid gray;
+    }
+    span {
+        font-family: fa;
+        &::before {
+            content: '\f002';
+        }
+    }
+}

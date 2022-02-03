@@ -1,0 +1,95 @@
+.note-details {
+    .modal-background {
+        opacity: 0;
+        transition: opacity 0.8s;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 6;
+        background-color: rgb(92 92 92 / 76%);
+    }
+    .note-details-modal {
+        box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent,
+            0 2px 15px rgb(0 0 0 / 30%);
+        padding: 15px;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        z-index: 7;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 0.8px solid rgb(211 211 211);
+        border-radius: 0.5rem;
+        .btn-note-detail-close {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before {
+                content: '\f00d';
+            }
+        }
+
+        input {
+            width: 100%;
+            border: none;
+            line-height: 2rem;
+            font-size: 20px;
+            border-bottom: 3px solid lightgray;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            height: 180px;
+            border: 3px solid lightgray;
+            width: 100%;
+            font-size: 20px;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+        }
+        input,
+        textarea {
+            background-color: transparent;
+        }
+        iframe {
+            height: 200px;
+        }
+    }
+    .open-modal {
+        opacity: 1;
+        transition: opacity 0.8s;
+    }
+    .btn-note-detail-save,
+    .btn-note-detail-close {
+        font-size: 22px;
+        font-family: fa;
+    }
+    .edit-bar {
+        padding-left: 20px;
+        padding-right: 20px;
+        .btn-note-detail-save::before {
+            content: '\f0c7';
+        }
+    }
+    .edit-note-img {
+        max-height: 350px;
+        max-width: 300px;
+    }
+    .edit-todos {
+        li {
+            display: flex;
+        }
+        input[type='text'] {
+            line-height: 17px;
+            font-size: 16px;
+            flex-basis: 90%;
+            border: none;
+            background-color: transparent;
+            border-bottom: 3px solid lightgray;
+        }
+        input[type='checkbox'] {
+            line-height: 17px;
+            flex-basis: 10%;
+        }
+    }
+}

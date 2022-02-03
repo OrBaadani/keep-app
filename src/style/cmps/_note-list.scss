@@ -1,0 +1,50 @@
+.note-list {
+    .pinned-notes {
+        order: -1;
+    }
+
+    .show-btn {
+        display: block;
+    }
+    .btn-note-pin {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+        font-family: fa;
+    }
+
+    .btn-note-pin::before {
+        content: '\f08d';
+    }
+    .note-list-ul {
+        column-count: 5;
+        padding-top: 20px;
+        /* min-height: 500px; */
+        /* column-gap: 15px; */
+        column-width: 300px;
+        break-inside: avoid;
+        overflow: hidden;
+        & > li {
+            /* margin-left: 15px; */
+            break-inside: avoid;
+            display: inline-block;
+            border: 0.8px solid lightgray;
+            border-radius: 0.5rem;
+            width: 330px;
+            padding: 10px;
+            margin-bottom: 20px;
+            z-index: 0;
+        }
+        .note-preview-container {
+            position: relative;
+            &:hover {
+                box-shadow: 0 0 0 0 transparent, 0 0 0 0 transparent,
+                    0 2px 15px rgb(0 0 0 / 30%);
+                .btn-note-pin {
+                    display: block;
+                }
+            }
+        }
+    }
+}

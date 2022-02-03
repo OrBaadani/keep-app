@@ -1,0 +1,48 @@
+.app-header {
+    // z-index: 7;
+    width: 100%;
+    position: fixed;
+    height: 8vh;
+    background-color: rgb(205, 227, 254);
+    /* background-color: rgb(165, 165, 165); */
+    z-index: 1;
+    a {
+        text-align: center;
+
+        div {
+            font-family: lato;
+        }
+    }
+    .app-header-section {
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 100%;
+        .logo {
+            font-family: aquire;
+            font-size: 30px;
+            display: flex;
+            gap: 10px;
+
+            a {
+                &:hover {
+                    color: rgb(92, 92, 92);
+                }
+            }
+        }
+        & > a {
+            // padding: 2px;
+            // border-radius: 5px;
+            &:hover {
+                color: rgb(92, 92, 92);
+            }
+        }
+    }
+    .menu-link-about {
+        font-size: 18px;
+        font-family: fa;
+
+        &::before {
+            content: '\f129';
+        }
+    }
+}
